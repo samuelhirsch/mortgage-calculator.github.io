@@ -148,7 +148,7 @@ export default function AmortizationTable(props: mortgageInfo) {
       {!tableData.error && (
         <div className="intrest-summary-grid">
           <div className="intrest-summary-info"><span>Total Interest</span><strong>{fmt.format(tableData.intrestPaid ?? 0)}</strong></div>
-          {<div className="intrest-summary-info intrest-saved"><span>Interest Saved</span><strong>{fmt.format(tableData.intrestSaved ?? 0)}</strong></div>}
+          {<div className="intrest-summary-info intrest-saved"><span>Interest Saved (with extra payment)</span><strong>{fmt.format(tableData.intrestSaved ?? 0)}</strong></div>}
 
         </div>
       )}
