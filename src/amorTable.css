@@ -1,0 +1,140 @@
+.amortization-card {
+  grid-column: 1 / -1;
+  /* Spans full width under the calculator */
+  margin-top: 24px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.amortization-header-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background: #fff;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.amortization-header-flex h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/*toggle css is in the calc. css*/
+
+.table-viewport {
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.amort-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.amort-table th {
+  position: sticky;
+  top: 0;
+  background: #f8fafc;
+  padding: 14px 24px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: #64748b;
+  text-align: right;
+  border-bottom: 2px solid #e2e8f0;
+}
+
+.amort-table td {
+  padding: 12px 24px;
+  text-align: right;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.amort-table th:first-child,
+.amort-table td:first-child {
+  text-align: left;
+}
+
+.balance-cell {
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.extra-payment-bar {
+  padding: 12px 24px;
+  background: #e7f6f7;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 5px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.extra-payment-input {
+  padding: 6px 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: #1e293b;
+  background-color: #f8fafc;
+}
+
+.extra-payment-data {
+  color: green;
+  display: block;
+}
+
+.intrest-summary-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.intrest-summary-info {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  border-left: 4px solid #dee2e6;
+}
+
+.intrest-summary-info span {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+.intrest-summary-info strong {
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.intrest-saved {
+  border-left-color: #28a745;
+}
+
+.intrest-saved strong {
+  color: #28a745;
+}
+
+.extra-payment-data {
+  color: #28a745;
+  font-weight: 600;
+  display: block;
+}
+
+
+
+
+
+@media (max-width:640px) {
+  .extra-payment-bar {
+    flex-direction: column;
+
+  }
+}
