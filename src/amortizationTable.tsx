@@ -74,7 +74,7 @@ export default function AmortizationTable(props: mortgageInfo) {
       schedule.push({
         month: i,
         principal: actualPrincipalPaidInCents / 100,
-        interest: interestForMonthInCents / 100,
+        interest: interestForMonthInCents / 100 - extraActuallyApplied / 100,
         extraPayment: extraActuallyApplied / 100,
         remainingBalance: Math.max(0, remainingBalanceInCents / 100),
       });
@@ -102,7 +102,7 @@ export default function AmortizationTable(props: mortgageInfo) {
       const yearlyBalance = lastMonthInSlice.remainingBalance;
       yearlySchedule.push({
         year: yearNumber,
-        principal: yearlyPrincipal,
+        principal: yearlyPrincipal - yearSlice[0].extraPayment,
         interest: yearlyInterest,
         extraPayment: yearSlice[0].extraPayment,
         remainingBalance: yearlyBalance
