@@ -73,8 +73,8 @@ export default function AmortizationTable(props: mortgageInfo) {
 
       schedule.push({
         month: i,
-        principal: actualPrincipalPaidInCents / 100,
-        interest: interestForMonthInCents / 100 - extraActuallyApplied / 100,
+        principal: actualPrincipalPaidInCents / 100 - extraActuallyApplied / 100,
+        interest: interestForMonthInCents / 100,
         extraPayment: extraActuallyApplied / 100,
         remainingBalance: Math.max(0, remainingBalanceInCents / 100),
       });
